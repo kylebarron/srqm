@@ -1,58 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="SRQM : An introductory statistics course for the social sciences, using Stata and coffee." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
     <title>SRQM</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">SRQM</h1>
-        <p class="header">An introductory statistics course for the social sciences, using Stata and coffee.</p>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/briatte/srqm/zipball/master">Download ZIP</a></li>
-          <!-- <li class="download"><a class="buttons" href="https://github.com/briatte/srqm/tarball/master">Download TAR</a></li> -->
-          <li><a class="buttons github" href="https://github.com/briatte/srqm">View On GitHub</a></li>
-        </ul>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/briatte/srqm">View on GitHub</a>
 
-        <p class="authors">Taught at <a href="http://sciences-po.fr/">Sciences Po</a> in Paris by <a href="http://f.briatte.org/">François Briatte</a> and <a href="http://ipetev.org/">Ivaylo Petev</a>.</p>
+          <h1 id="project_title">SRQM</h1>
+          <h2 id="project_tagline">An introductory statistics course for the social sciences, using Stata and coffee.</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/briatte/srqm/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/briatte/srqm/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      </header>
-      <section>
-        <h3>What is this?</h3>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>This repository contains the teaching material for the <a href="http://f.briatte.org/teaching/quanti/">Statistical Reasoning and Quantitative Methods</a> (SRQM) course run at Sciences Po by François Briatte and Ivaylo Petev. The course requires Internet access and a working copy of <a href="http://www.stata.com/">Stata</a>.</p>
 
-			<p>This page contains teaching material for the <a href="http://f.briatte.org/teaching/quanti/">Statistical Reasoning and Quantitative Methods</a> course. Stata and the course handbooks are not included due to copyright restrictions.</p>
+<p>In the setup instructions below, the <code>SRQM</code> folder is the folder that you download from this webpage in compressed format. Move it to a stable and easily accessible location on your hard drive.</p>
 
-			<p>To install on your system, <a href="https://github.com/briatte/srqm/zipball/master">download the <code>SRQM</code> folder</a> and expand it somewhere safe and accessible. Setup instructions are available from the <a href="https://github.com/briatte/srqm/blob/master/README.md">README</a> file of the folder.</p>
+<blockquote>
+<p>If you later move the <code>SRQM</code> folder by changing its name or the names of the folders that lead to it on your hard drive, you will have to run the next installation steps again.</p>
+</blockquote>
 
-		<h3>Who is this for?</h3>
+<h2>Step 1: open Stata</h2>
 
-			<p>The <code>SRQM</code> folder, which we call the ‘Teaching Pack’ in class, is distributed to all students on their first week. It was made available as a <a href="https://github.com/briatte/srqm">GitHub repository</a> for backup and sharing.</p>
+<p>Open Stata:</p>
 
-			<p>The <a href="https://github.com/briatte/srqm/wiki">repository wiki</a> and the <a href="http://srqm.tumblr.com/">course blog</a> provide additional links to inspirational material and learning resources. You are also invited to <a href="https://github.com/briatte/srqm/issues">report issues</a> with the code or course content if you detect any.</p>
+<h3>Windows users:</h3>
 
-		<h3>Contact</h3>
+<ul>
+<li>Make sure that the <em>entire Stata application folder</em> is installed in the <code>Program Files</code> folder (sometimes renamed in your language). The application needs to run from its folder to work.</li>
+<li>On Windows Vista, 7 or above, open Stata by right-clicking the program icon and selecting 'Run as administrator' for this setup procedure to complete.</li>
+<li>You might see two versions of Stata on your system, one of which works only on 64-bit computers: use whichever works with your system.</li>
+</ul><h3>Mac OS X users:</h3>
 
-			<p>Please feel free to <a href="mailto:f.briatte@ed.ac.uk">email</a> your questions if you have any. Comments are also very welcome, especially from past students who now use Stata in their work, and there are a few!</p>
-			
-			<p>Enjoy.</p>
+<ul>
+<li>Make sure that the <em>entire Stata application folder</em> is installed in the <code>Applications</code> folder. The application needs to run from its folder to work.</li>
+<li>If you are using Mac OS X Gatekeeper settings, allow applications downloaded from anywhere to run in the 'Security &amp; Privacy' panel of your System Preferences (accessible from the Apple menu).</li>
+</ul><h2>Step 2: set the working directory</h2>
+
+<p>Use the 'File : Change Working Directory…' menu to set the <code>SRQM</code> folder as the working directory. The menu is also accessible with ⌘⇧J (Cmd-Shift-J) on Mac OS X.</p>
+
+<p>The folder path that appears in the Results window might look like the following examples:</p>
+
+<table>
+<tr>
+<th align="left">System</th>
+<th align="left">Example of a folder path</th>
+</tr>
+<tr>
+<td align="left">Mac OS X</td>
+<td align="left"><code>/Users/fr/Documents/Teaching/SRQM</code></td>
+</tr>
+<tr>
+<td align="left">Windows</td>
+<td align="left"><code>C:\Users\Ivo\Desktop\SRQM</code></td>
+</tr>
+</table><p>This path is where the course setup will tell Stata to look for the SRQM teaching material. This folder path must stay intact throughout the semester for Stata to access the course material.</p>
+
+<blockquote>
+<p>If you inadvertently modify the path to your <code>SRQM</code> folder by moving or renaming it, you will get an error message and will have to run through these installation steps again. Be careful!</p>
+</blockquote>
+
+<h2>Step 3: run the setup</h2>
+
+<p>Make sure that you are connected to the Internet, then, type the following line in the Command window and press <code>Enter</code> to execute (run) the course setup:</p>
+
+<pre><code>run profile
+</code></pre>
+
+<p>The setup will take a few minutes to complete. It will allow you to download additional teaching material during the semester with the <code>srqm fetch</code> command.</p>
+
+<h2>Uninstalling</h2>
+
+<p>At the end of the semester, type <code>srqm clean folder</code> to stop redirecting Stata to the <code>SRQM</code> folder as your working directory.</p>
+
+<hr><p>Welcome to the course, and see you soon!</p>
       </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/broccolini/dinky">Dinky theme</a> by <a href="http://broccolini.net/">Diana Mounter</a>.</small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">SRQM maintained by <a href="https://github.com/briatte">briatte</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
-		
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-39170513-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
   </body>
 </html>
