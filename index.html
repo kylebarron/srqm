@@ -1,70 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="SRQM : An introductory statistics course for the social sciences, using Stata and coffee." />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SRQM by briatte</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>SRQM</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>SRQM</h1>
+        <p>An introductory statistics course for the social sciences, using Stata and coffee.</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/briatte/srqm">View on GitHub</a>
+        <p class="view"><a href="https://github.com/briatte/srqm">View the Project on GitHub <small>briatte/srqm</small></a></p>
 
-          <h1 id="project_title">SRQM</h1>
-          <h2 id="project_tagline">An introductory statistics course for the social sciences, using Stata and coffee.</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/briatte/srqm/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/briatte/srqm/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <ul>
+          <li><a href="https://github.com/briatte/srqm/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/briatte/srqm/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/briatte/srqm">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="srqm-readme" class="anchor" href="#srqm-readme"><span class="octicon octicon-link"></span></a>SRQM: README</h1>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>This repository contains the teaching material for the <a href="http://f.briatte.org/teaching/quanti/">Statistical Reasoning and Quantitative Methods</a> (SRQM) course run at Sciences Po by François Briatte and Ivaylo Petev. The course requires Internet access and a working copy of <a href="http://www.stata.com/">Stata</a>.</p>
+<p>This file explains how to run the Stata setup required to follow the <a href="http://f.briatte.org/teaching/quanti/">Statistical Reasoning and Quantitative Methods</a> (SRQM) course taught by François Briatte and Ivaylo Petev.</p>
 
-<p>In the setup instructions below, the <code>SRQM</code> folder is the folder that you download from this webpage in compressed format. Move it to a stable and easily accessible location on your hard drive.</p>
+<p>The course requires Internet access, basic computer skills and a working copy of [Stata][stata], by StataCorp. Stata 11 is already installed on Sciences Po workstations. The Small version of Stata cannot open large datasets, so make sure that you are using Stata IC (InterCooled), MP (Multiple Processors) or SE (Standard Edition, which is what Sciences Po workstations run on).</p>
+
+<p>In the instructions below, the <code>SRQM</code> folder is the folder that you can download from its <a href="http://f.briatte.org/srqm/">webpage</a> or <a href="https://github.com/briatte/srqm">repository</a>. This folder is called the 'Teaching Pack' in class.</p>
+
+<p>If you are enrolled in the course, you will read this file and setup your workstation during the first or second week of class.</p>
+
+<hr><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Please follow the instructions closely and ask for help as early as possible, so that we can put configuration issues behind us and move to the actual content of the course.</p>
+
+<p><strong>Quick setup:</strong> copy the <code>SRQM</code> folder to a USB key, open Stata, set the <code>SRQM</code> folder as your Stata working directory with the 'File : Change Working Directory…' menu item, type <code>run profile</code>, and wait five minutes until Stata says "Hello!".</p>
+
+<h3>
+<a name="step-1-download-the-course-material" class="anchor" href="#step-1-download-the-course-material"><span class="octicon octicon-link"></span></a>Step 1. Download the course material</h3>
+
+<p>Move the whole <code>SRQM</code> folder to a stable and easily accessible location on your hard drive. Keep the names of that folder and the folders that lead to it intact throughout the course.</p>
 
 <blockquote>
-<p>If you later move the <code>SRQM</code> folder by changing its name or the names of the folders that lead to it on your hard drive, you will have to run the next installation steps again.</p>
+<p><strong>Important</strong>: If you later move the <code>SRQM</code> folder by changing its name or the names of the folders that lead to it on your hard drive, you will have to run the next installation steps again. Other errors will occur if you rename the <code>code</code>, <code>data</code> or <code>setup</code> folders, or some of the files located inside the latter two.</p>
 </blockquote>
 
-<h2>Step 1: open Stata</h2>
+<h3>
+<a name="step-2-check-the-stata-application-folder" class="anchor" href="#step-2-check-the-stata-application-folder"><span class="octicon octicon-link"></span></a>Step 2. Check the Stata application folder</h3>
 
-<p>Open Stata:</p>
+<p>Check your Stata installation:</p>
 
-<h3>Windows users:</h3>
-
-<ul>
-<li>Make sure that the <em>entire Stata application folder</em> is installed in the <code>Program Files</code> folder (sometimes renamed in your language). The application needs to run from its folder to work.</li>
-<li>On Windows Vista, 7 or above, open Stata by right-clicking the program icon and selecting 'Run as administrator' for this setup procedure to complete.</li>
-<li>You might see two versions of Stata on your system, one of which works only on 64-bit computers: use whichever works with your system.</li>
-</ul><h3>Mac OS X users:</h3>
+<h3>
+<a name="windows-users" class="anchor" href="#windows-users"><span class="octicon octicon-link"></span></a>Windows users:</h3>
 
 <ul>
-<li>Make sure that the <em>entire Stata application folder</em> is installed in the <code>Applications</code> folder. The application needs to run from its folder to work.</li>
-<li>If you are using Mac OS X Gatekeeper settings, allow applications downloaded from anywhere to run in the 'Security &amp; Privacy' panel of your System Preferences (accessible from the Apple menu).</li>
-</ul><h2>Step 2: set the working directory</h2>
+<li>Make sure that the <em>entire Stata application folder</em> is installed in the <code>Program Files</code> folder (sometimes renamed in your language). Stata needs to run <em>from its own folder</em> to work.</li>
+<li>On Windows Vista, 7 or above, you will need to open Stata by right-clicking the program icon and selecting 'Run as administrator' for this setup procedure to fully complete.</li>
+<li>If you see two versions of Stata, one of them will work only on 64-bit computers: use whichever version works with your system, preferrably the 64-bit version for better speed performance.</li>
+</ul><h3>
+<a name="mac-os-x-users" class="anchor" href="#mac-os-x-users"><span class="octicon octicon-link"></span></a>Mac OS X users:</h3>
 
-<p>Use the 'File : Change Working Directory…' menu to set the <code>SRQM</code> folder as the working directory. The menu is also accessible with ⌘⇧J (Cmd-Shift-J) on Mac OS X.</p>
+<ul>
+<li>Make sure that the <em>entire Stata application folder</em> is installed in the <code>Applications</code> folder. Stata needs to run <em>from its own folder</em> to work.</li>
+<li>If you are using Mac OS X Gatekeeper settings, access the 'Security &amp; Privacy' panel of your System Preferences from the Apple menu and allow applications downloaded from anywhere.</li>
+<li>If you know how to use the Terminal, note that you can run Stata from there. The class does not require that you are that much of a geek.</li>
+</ul><p>Now open Stata and skip the update dialog by disabling automatic updates, as we will learn to update Stata and packages by ourselves, in true nerd spirit.</p>
+
+<h3>
+<a name="step-3-set-the-stata-working-directory" class="anchor" href="#step-3-set-the-stata-working-directory"><span class="octicon octicon-link"></span></a>Step 3. Set the Stata working directory</h3>
+
+<p>Set the <code>SRQM</code> folder as the working directory with the 'File : Change Working Directory…' menu item, also accessible with ⌘⇧J (Command-Shift-J) on Mac OS X.</p>
+
+<p>Select the <code>SRQM</code> folder and press <code>OK</code>.</p>
 
 <p>The folder path that appears in the Results window might look like the following examples:</p>
 
 <table>
-<tr>
+<thead><tr>
 <th align="left">System</th>
 <th align="left">Example of a folder path</th>
-</tr>
+</tr></thead>
+<tbody>
 <tr>
 <td align="left">Mac OS X</td>
 <td align="left"><code>/Users/fr/Documents/Teaching/SRQM</code></td>
@@ -73,37 +99,47 @@
 <td align="left">Windows</td>
 <td align="left"><code>C:\Users\Ivo\Desktop\SRQM</code></td>
 </tr>
-</table><p>This path is where the course setup will tell Stata to look for the SRQM teaching material. This folder path must stay intact throughout the semester for Stata to access the course material.</p>
+</tbody>
+</table><p>This path is where the course setup will tell Stata to look for the SRQM teaching material.</p>
 
 <blockquote>
-<p>If you inadvertently modify the path to your <code>SRQM</code> folder by moving or renaming it, you will get an error message and will have to run through these installation steps again. Be careful!</p>
+<p><strong>Important:</strong> This folder path must stay intact throughout the semester for Stata to access the course material. If you inadvertently modify the path to your <code>SRQM</code> folder by moving or renaming it, you will get an error message and will have to run through installation steps 2 to 4 of this setup again. Be careful!</p>
 </blockquote>
 
-<h2>Step 3: run the setup</h2>
+<p>Have you read the "Important" message above?</p>
 
-<p>Make sure that you are connected to the Internet, then, type the following line in the Command window and press <code>Enter</code> to execute (run) the course setup:</p>
+<h3>
+<a name="step-4-run-the-course-setup" class="anchor" href="#step-4-run-the-course-setup"><span class="octicon octicon-link"></span></a>Step 4. Run the course setup</h3>
 
-<pre><code>run profile
-</code></pre>
+<ol>
+<li>Make sure that you are connected to the Internet. At Sciences Po, this requires checking that you logged into the wifi network. </li>
+<li>Then type <code>run profile</code> in the Command window and press <code>Enter</code>.</li>
+<li>Wait for the run to complete and salute you with a 'Hello!' message.</li>
+</ol><p>This command runs the <code>profile.do</code> file that will setup Stata for this course by running some of the code stored in the <a href="https://github.com/briatte/srqm/tree/master/setup"><code>setup</code> folder</a>. The setup accomplishes three things:</p>
 
-<p>The setup will take a few minutes to complete. It will allow you to download additional teaching material during the semester with the <code>srqm fetch</code> command.</p>
+<ul>
+<li>it adjusts some common Stata settings for screen output and installs an <a href="https://github.com/briatte/burd">improved graph scheme</a>;</li>
+<li>it adjusts memory to 500MB on versions of Stata before 11 (Stata 12 does it automatically);</li>
+<li>it installs some user-contributed Stata commands like <code>fre</code> or <code>spineplot</code> that are used in the course; and </li>
+<li>it creates another <code>profile.do</code> file in the Stata application folder to redirect it to the <code>SRQM</code> folder.</li>
+</ul><p>The installation will go fine as long as you are running with administrative privileges on a machine that has a decent amount of RAM (1GB is a strict minimum) and a minimal amount of disk space (aim at 10% of your hard drive capacity, or at a minimum of 1GB if you are living dangerously). The entire course material takes less than 400MB with all datasets uncompressed.</p>
 
-<h2>Uninstalling</h2>
+<h2>
+<a name="uninstalling" class="anchor" href="#uninstalling"><span class="octicon octicon-link"></span></a>Uninstalling</h2>
 
-<p>At the end of the semester, type <code>srqm clean folder</code> to stop redirecting Stata to the <code>SRQM</code> folder as your working directory.</p>
+<ul>
+<li>If you do not like the course graph scheme, type <code>set scheme s2color</code> to revert to the default Stata scheme, or use any other scheme of your choice (see <code>help scheme</code>).</li>
+<li>At any stage of the course, type <code>srqm clean</code> to remove temporary files. At the end of the class, type <code>srqm clean folder</code> to stop redirecting Stata to the <code>SRQM</code> folder.</li>
+</ul><hr><p>You can now start reading the Stata Guide.</p>
 
-<hr><p>Welcome to the course, and see you soon!</p>
+<p>Welcome to the course, and see you soon!</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">SRQM maintained by <a href="https://github.com/briatte">briatte</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/briatte">briatte</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -114,7 +150,6 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
